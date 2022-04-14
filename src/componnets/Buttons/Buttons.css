@@ -1,0 +1,10 @@
+.buttons_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}

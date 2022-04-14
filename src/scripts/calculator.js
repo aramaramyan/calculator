@@ -1,5 +1,5 @@
-class Calculator {
-  constructor(num) {
+class Calc {
+  constructor() {
     this.state = 0;
   }
 
@@ -26,4 +26,4 @@ class Calculator {
   }
 }
 
-export default Calculator;
+export default Calc;
