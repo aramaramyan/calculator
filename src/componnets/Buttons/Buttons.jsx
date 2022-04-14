@@ -14,6 +14,7 @@ import mulIcon from "./../../icons/mul.svg"
 import divideIcon from "./../../icons/divide.svg"
 import plusMinusIcon from "./../../icons/plus-minus.svg";
 import cIcon from "./../../icons/C.svg"
+import deleteIcon from "./../../icons/delete.svg";
 import equalIcon from "./../../icons/equals.svg";
 import dotIcon from "./../../icons/dot.svg";
 import "./Buttons.css";
@@ -23,7 +24,8 @@ export default function Buttons() {
   return (
     <section className="buttons_wrapper">
       <div className="row">
-        <Button symbol={cIcon} width="110px"/>
+        <Button symbol={cIcon} />
+        <Button symbol={deleteIcon} />
         <Button symbol={plusMinusIcon}/>
         <Button symbol={divideIcon}/>
       </div>
