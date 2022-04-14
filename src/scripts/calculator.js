@@ -1,6 +1,29 @@
 class Calc {
   constructor() {
-    this.state = 0;
+    this.prev = "";
+    this.current = "0";
+  }
+
+  addDigit(num) {
+    if(this.current === "0") {
+      this.current = `${num}`;
+      console.log("script.js----------", this.current)
+    } else {
+      this.current += `${num}`;
+      console.log("script.js*********", this.current)
+    }
+
+    return this.current;
+  }
+
+  clear() {
+    this.prev = "";
+    this.current = "0";
+
+    return {
+      prev: this.prev,
+      current: this.current
+    }
   }
 
   sum(num) {

@@ -1,7 +1,7 @@
 .output_wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
     height: 100px;
     padding: 10px;
@@ -11,17 +11,16 @@
 
 }
 
-.operand {
+.current_operand,
+.trash_icon {
     display: flex;
     justify-content: flex-end;
-}
-
-.prev {
-    margin-bottom: 15px;
-    color: #9ba0a6;
-}
-
-.current {
     font-size: 24px;
     color: #ffffff;
+}
+
+.trash_icon img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }

@@ -20,35 +20,35 @@ import dotIcon from "./../../icons/dot.svg";
 import "./Buttons.css";
 import Button from "../Button/Button";
 
-export default function Buttons() {
+export default function Buttons({addDigit, clear}) {
   return (
     <section className="buttons_wrapper">
       <div className="row">
-        <Button symbol={cIcon} />
+        <Button symbol={cIcon}  />
         <Button symbol={deleteIcon} />
         <Button symbol={plusMinusIcon}/>
         <Button symbol={divideIcon}/>
       </div>
       <div className="row">
-        <Button symbol={Icon_7}/>
-        <Button symbol={Icon_8}/>
-        <Button symbol={Icon_9}/>
+        <Button symbol={Icon_7} digit={7} addDigit={addDigit}/>
+        <Button symbol={Icon_8} digit={8} addDigit={addDigit}/>
+        <Button symbol={Icon_9} digit={9} addDigit={addDigit}/>
         <Button symbol={mulIcon}/>
       </div>
       <div className="row">
-        <Button symbol={Icon_4}/>
-        <Button symbol={Icon_5}/>
-        <Button symbol={Icon_6}/>
+        <Button symbol={Icon_4} digit={4} addDigit={addDigit}/>
+        <Button symbol={Icon_5} digit={5} addDigit={addDigit}/>
+        <Button symbol={Icon_6} digit={6} addDigit={addDigit}/>
         <Button symbol={minusIcon}/>
       </div>
       <div className="row">
-        <Button symbol={Icon_1}/>
-        <Button symbol={Icon_2}/>
-        <Button symbol={Icon_3}/>
+        <Button symbol={Icon_1} digit={1} addDigit={addDigit}/>
+        <Button symbol={Icon_2} digit={2} addDigit={addDigit}/>
+        <Button symbol={Icon_3} digit={3} addDigit={addDigit}/>
         <Button symbol={plusIcon}/>
       </div>
       <div className="row">
-        <Button symbol={Icon_0} width="110px"/>
+        <Button symbol={Icon_0} width="110px" digit={0} addDigit={addDigit}/>
         <Button symbol={dotIcon}/>
         <Button symbol={equalIcon}/>
       </div>
