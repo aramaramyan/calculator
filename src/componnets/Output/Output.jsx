@@ -9,8 +9,11 @@ export default function Output({state, id, deleteCalc}) {
       }}>
         <img src={trashIcon} alt="Trash Icon"/>
       </div>
+      <div className="sign">
+        <p>{state.sign}</p>
+      </div>
       <div className="current_operand">
-        <p>{state}</p>
+        <p>{state.current}</p>
       </div>
     </section>
   );
