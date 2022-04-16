@@ -20,13 +20,13 @@ import dotIcon from "./../../icons/dot.svg";
 import "./Buttons.css";
 import Button from "../Button/Button";
 
-export default function Buttons({addDigit, clear, sum, sub, mul, div, equal, deleteDigit}) {
+export default function Buttons({addDigit, clear, sum, sub, mul, div, equal, plusMinus, deleteDigit}) {
   return (
     <section className="buttons_wrapper">
       <div className="row">
         <Button symbol={cIcon}  action={clear}/>
         <Button symbol={deleteIcon} action={deleteDigit}/>
-        <Button symbol={plusMinusIcon}/>
+        <Button symbol={plusMinusIcon} action={plusMinus}/>
         <Button symbol={divideIcon} action={div}/>
       </div>
       <div className="row">

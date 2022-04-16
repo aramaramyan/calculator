@@ -8,6 +8,7 @@ import "./Calculator.css";
 export default function Calculator({id, deleteCalc}) {
   const calc = useRef(new Calc());
   const [state, setState] = useState({prev: calc.current.prev, current: calc.current.current, sign: calc.current.sign});
+  console.log("CALCULATOR.JSX", state);
 
   function addDigit(num) {
    let current = calc.current.addDigit(num);
@@ -44,6 +45,11 @@ export default function Calculator({id, deleteCalc}) {
     setState({...state, current: result})
   }
 
+  function plusMinus() {
+    let result = calc.current.plusMinus();
+    setState(prev => ({...prev, current: result}));
+  }
+
   function equal() {
     let result = calc.current.equal();
     setState({prev: result.prev, current: result.current, sign: result.sign});
@@ -64,6 +70,7 @@ export default function Calculator({id, deleteCalc}) {
         mul={mul}
         div={div}
         equal={equal}
+        plusMinus={plusMinus}
         deleteDigit={deleteDigit}
       />
     </div>

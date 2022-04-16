@@ -7,10 +7,6 @@ class Calc {
   }
 
   addDigit(num) {
-    if(num === "." && this.current.includes(num)) {
-      return;
-    }
-
     if (this.isOperation) {
       this.isOperation = false;
       this.current = `${num}`
@@ -20,8 +16,16 @@ class Calc {
     if(num === "." && this.current === "0") {
       this.current = "0.";
     } else {
-      this.current === "0" ? this.current = `${num}` : this.current += `${num}`;
+      if(this.current === "0") {
+        this.current = `${num}`
+      } else if(num === "." && this.current.includes(".")){
+        return this.current;
+      } else {
+        this.current += `${num}`
+      }
     }
+
+    console.log(`prev: ${this.prev}, current: ${this.current}, sign: ${this.sign}, isOperation: ${this.isOperation}`)
 
     return this.current;
   };
@@ -118,6 +122,11 @@ class Calc {
         sign: this.sign
       };
     }
+  }
+
+  plusMinus() {
+    this.current = String(+this.current * -1);
+    return this.current;
   }
 
   calculating() {
