@@ -2,15 +2,20 @@ class Calc {
   constructor() {
     this.prev = "";
     this.current = "0";
+    this.isOperation = "";
   }
 
   addDigit(num) {
+    if(this.isOperation) {
+      this.current = `${num}`
+      this.isOperation = "";
+      return this.current;
+    }
+
     if(this.current === "0") {
       this.current = `${num}`;
-      console.log("script.js----------", this.current)
     } else {
       this.current += `${num}`;
-      console.log("script.js*********", this.current)
     }
 
     return this.current;
@@ -26,12 +31,23 @@ class Calc {
     }
   }
 
-  sum(num) {
-    return this.state += num;
+  sum() {
+    if(this.prev) {
+      this.current = +this.current + +this.prev;
+      this.prev = this.current;
+      this.isOperation = "+";
+    } else {
+      this.prev = this.current;
+      this.isOperation = "+";
+    }
+
+    return {
+      prev: this.prev,
+      current: this.current
+    };
   }
 
-  sub(num) {
-    return this.state -= num;
+  sub() {
   }
 
   mul(num) {

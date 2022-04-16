@@ -20,7 +20,7 @@ import dotIcon from "./../../icons/dot.svg";
 import "./Buttons.css";
 import Button from "../Button/Button";
 
-export default function Buttons({addDigit, clear}) {
+export default function Buttons({addDigit, clear, sum}) {
   return (
     <section className="buttons_wrapper">
       <div className="row">
@@ -45,7 +45,7 @@ export default function Buttons({addDigit, clear}) {
         <Button symbol={Icon_1} digit={1} action={addDigit}/>
         <Button symbol={Icon_2} digit={2} action={addDigit}/>
         <Button symbol={Icon_3} digit={3} action={addDigit}/>
-        <Button symbol={plusIcon}/>
+        <Button symbol={plusIcon} action={sum}/>
       </div>
       <div className="row">
         <Button symbol={Icon_0} width="110px" digit={0} action={addDigit}/>
