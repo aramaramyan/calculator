@@ -8,7 +8,6 @@ import "./Calculator.css";
 export default function Calculator({id, deleteCalc}) {
   const calc = useRef(new Calc());
   const [state, setState] = useState({prev: calc.current.prev, current: calc.current.current, sign: calc.current.sign});
-  console.log("CALCULATOR.JSX", state);
 
   function addDigit(num) {
    let current = calc.current.addDigit(num);

@@ -25,8 +25,6 @@ class Calc {
       }
     }
 
-    console.log(`prev: ${this.prev}, current: ${this.current}, sign: ${this.sign}, isOperation: ${this.isOperation}`)
-
     return this.current;
   };
 
@@ -113,8 +111,6 @@ class Calc {
 
       this.sign = "";
       this.prev = "";
-
-      console.log("*EQUAL*", "prev:", this.prev, "current:", this.current, "sign:", this.sign);
 
       return {
         prev: this.prev,
